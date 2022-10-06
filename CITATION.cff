@@ -43,6 +43,7 @@ authors:
 license: GPL-2.0
 repository-artifact: https://github.com/kevinmatthes/literature
 title: literature
+type: dataset
 url: https://github.com/kevinmatthes/literature
 
 # References.

@@ -34,8 +34,6 @@ name: cffconvert
 
 on:
   push:
-    paths:
-      - CITATION.cff
 
 permissions:
   contents: read
@@ -53,6 +51,13 @@ jobs:
       - name: cffconvert
         uses: citation-file-format/cffconvert-github-action@2.0.0
         with:
-          args: --validate
+          args: --validate -i ${{ matrix.cff }}
+    strategy:
+      matrix:
+        cff:
+          - CITATION.cff
+          - chivers.sleightholme/fortran/2018.cff
+          - kuhme.witschital/fortran/1991.cff
+          - metcalf.reid.cohen/fortran/2018.cff
 
 ################################################################################

@@ -63,6 +63,7 @@ jobs:
       matrix:
         cff:
           - CITATION.cff
+          - chacon.straub/git/2014.cff
           - chivers.sleightholme/fortran/2018.cff
           - kuhme.witschital/fortran/1991.cff
           - metcalf.reid.cohen/fortran/2018.cff

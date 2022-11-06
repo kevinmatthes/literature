@@ -34,7 +34,13 @@ name: cffconvert
 
 on:
   pull_request:
+    paths:
+      - '**/**/*.cff'
+      - CITATION.cff
   push:
+    paths:
+      - '**/**/*.cff'
+      - CITATION.cff
 
 permissions:
   contents: read

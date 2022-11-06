@@ -21,51 +21,44 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       The definition of a GitHub Action.
+##  BRIEF       Citation settings for the Git repository.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
-##  FILE        cffconvert.yml
+##  FILE        2014.cff
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: cffconvert
+# Parser settings.
+authors:
+  - alias: kevinmatthes
+    family-names: Matthes
+    given-names: Kevin
+cff-version: 1.2.0
+license: GPL-2.0
+message: This is a CFF database to be fetched by `cffreference`.
+title: '2014'
 
-on:
-  pull_request:
-    paths:
-      - '**/**/*.cff'
-      - CITATION.cff
-  push:
-    paths:
-      - '**/**/*.cff'
-      - CITATION.cff
-
-permissions:
-  contents: read
-
-jobs:
-  validation:
-    name: validate
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3.1.0
-        with:
-          persist-credentials: false
-
-      - name: cffconvert
-        uses: citation-file-format/cffconvert-github-action@2.0.0
-        with:
-          args: --validate -i ${{ matrix.cff }}
-    strategy:
-      matrix:
-        cff:
-          - CITATION.cff
-          - chacon.straub/git/2014.cff
-          - chivers.sleightholme/fortran/2018.cff
-          - kuhme.witschital/fortran/1991.cff
-          - metcalf.reid.cohen/fortran/2018.cff
+# The entry to fetch.
+preferred-citation:
+  abstract: Everything you need to know about Git.
+  authors:
+    - family-names: Chacon
+      given-names: Scott
+    - family-names: Straub
+      given-names: Ben
+  edition: '2'
+  isbn: 978-1-4842-0077-3
+  languages:
+    - en
+  pages: 426
+  publisher:
+    city: New York
+    country: US
+    name: Apress
+  title: Pro Git
+  type: book
+  year: 2014
 
 ################################################################################

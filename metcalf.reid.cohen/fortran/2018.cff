@@ -21,51 +21,47 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       The definition of a GitHub Action.
+##  BRIEF       Citation settings for the Git repository.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
-##  FILE        cffconvert.yml
+##  FILE        2018.cff
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: cffconvert
+# Parser settings.
+authors:
+  - alias: kevinmatthes
+    family-names: Matthes
+    given-names: Kevin
+cff-version: 1.2.0
+license: GPL-2.0
+message: This is a CFF database to be fetched by `cffreference`.
+title: '2018'
 
-on:
-  pull_request:
-    paths:
-      - '**/**/*.cff'
-      - CITATION.cff
-  push:
-    paths:
-      - '**/**/*.cff'
-      - CITATION.cff
-
-permissions:
-  contents: read
-
-jobs:
-  validation:
-    name: validate
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3.1.0
-        with:
-          persist-credentials: false
-
-      - name: cffconvert
-        uses: citation-file-format/cffconvert-github-action@2.0.0
-        with:
-          args: --validate -i ${{ matrix.cff }}
-    strategy:
-      matrix:
-        cff:
-          - CITATION.cff
-          - chacon.straub/git/2014.cff
-          - chivers.sleightholme/fortran/2018.cff
-          - kuhme.witschital/fortran/1991.cff
-          - metcalf.reid.cohen/fortran/2018.cff
+# The entry to fetch.
+preferred-citation:
+  abstract: Incorporating Fortran 2018
+  authors:
+    - family-names: Metcalf
+      given-names: Michael
+    - family-names: Reid
+      given-names: John
+    - family-names: Cohen
+      given-names: Malcolm
+  doi: 10.1093/oso/9780198811886.001.0001
+  edition: '2'
+  isbn: 978-0-19-881188-6
+  languages:
+    - en
+  pages: 522
+  publisher:
+    city: Oxford
+    country: GB
+    name: Oxford University Press
+  title: Modern Fortran Explained
+  type: book
+  year: 2018
 
 ################################################################################

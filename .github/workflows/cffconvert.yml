@@ -70,5 +70,6 @@ jobs:
           - hammerlindl.bowman.prince/asymptote/2021/2.69.cff
           - hammerlindl.bowman.prince/asymptote/2022/2.83.cff
           - metcalf.reid.cohen/fortran/2018.cff
+          - sakai.matthes/sysexits-rs/2022/0.3.3.cff
 
 ################################################################################

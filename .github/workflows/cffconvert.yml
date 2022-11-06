@@ -36,6 +36,7 @@ on:
   pull_request:
     paths:
       - '**/**/*.cff'
+      - '**/**/**/*.cff'
       - CITATION.cff
   push:
     paths:
@@ -66,6 +67,8 @@ jobs:
           - chacon.straub/git/2014.cff
           - chivers.sleightholme/fortran/2018.cff
           - kuhme.witschital/fortran/1991.cff
+          - hammerlindl.bowman.prince/asymptote/2021/2.69.cff
+          - hammerlindl.bowman.prince/asymptote/2022/2.83.cff
           - metcalf.reid.cohen/fortran/2018.cff
 
 ################################################################################

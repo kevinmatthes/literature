@@ -21,54 +21,42 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       The definition of a GitHub Action.
+##  BRIEF       Citation settings for the Git repository.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
-##  FILE        cffconvert.yml
+##  FILE        2.69.cff
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: cffconvert
+# Parser settings.
+authors:
+  - alias: kevinmatthes
+    family-names: Matthes
+    given-names: Kevin
+cff-version: 1.2.0
+license: GPL-2.0
+message: This is a CFF database to be fetched by `cffreference`.
+title: '2.69'
 
-on:
-  pull_request:
-    paths:
-      - '**/**/*.cff'
-      - '**/**/**/*.cff'
-      - CITATION.cff
-  push:
-    paths:
-      - '**/**/*.cff'
-      - CITATION.cff
-
-permissions:
-  contents: read
-
-jobs:
-  validation:
-    name: validate
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3.1.0
-        with:
-          persist-credentials: false
-
-      - name: cffconvert
-        uses: citation-file-format/cffconvert-github-action@2.0.0
-        with:
-          args: --validate -i ${{ matrix.cff }}
-    strategy:
-      matrix:
-        cff:
-          - CITATION.cff
-          - chacon.straub/git/2014.cff
-          - chivers.sleightholme/fortran/2018.cff
-          - kuhme.witschital/fortran/1991.cff
-          - hammerlindl.bowman.prince/asymptote/2021/2.69.cff
-          - hammerlindl.bowman.prince/asymptote/2022/2.83.cff
-          - metcalf.reid.cohen/fortran/2018.cff
+# The entry to fetch.
+preferred-citation:
+  abstract: The Vector Graphics Language
+  authors:
+    - family-names: Hammerlindl
+      given-names: Andy
+    - family-names: Bowman
+      given-names: John
+    - family-names: Prince
+      given-names: Tom
+  languages:
+    - en
+  month: 02
+  title: Asymptote
+  type: manual
+  version: 2.69
+  url: https://asymptote.sourceforge.io/
+  year: 2021
 
 ################################################################################

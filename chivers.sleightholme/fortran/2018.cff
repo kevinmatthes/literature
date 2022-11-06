@@ -37,7 +37,7 @@ authors:
     given-names: Kevin
 cff-version: 1.2.0
 license: GPL-2.0
-message: This is a CFF database to be fetched with `cffreference`.
+message: This is a CFF database to be fetched by `cffreference`.
 title: '2018'
 
 # The entry to fetch.

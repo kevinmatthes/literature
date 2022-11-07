@@ -43,7 +43,7 @@ title: '0.3.3'
 # The entry to fetch.
 preferred-citation:
   type: software
-  date-released: 2022-09-18
+  date-released: 2022-10-24
   version: 0.3.3
   abstract: The system exit codes as defined by <sysexits.h> for Rust
   authors:

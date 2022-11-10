@@ -21,7 +21,7 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       Citation settings for the Git repository.
+##  BRIEF       This is a CFF database to be fetched by `cffreference`.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
 ##  FILE        1991.cff

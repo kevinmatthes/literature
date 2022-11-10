@@ -33,9 +33,15 @@
 
 ## Summary
 
+[![](https://github.com/kevinmatthes/literature/workflows/cffconvert/badge.svg)](https://github.com/kevinmatthes/literature/workflows/cffconvert)
+
 A set of BibTeX entries for Doxygen manuals.
 
+1. [License](#license)
+
 ## License
+
+[![](https://img.shields.io/github/license/kevinmatthes/literature)](https://github.com/kevinmatthes/literature)
 
 This project's license is **GPL-2.0** (as of June 1991).  The whole license text
 can be found in `LICENSE` in the main directory of this repository.  The brief

@@ -69,6 +69,7 @@ jobs:
           - kuhme.witschital/fortran/1991.cff
           - hammerlindl.bowman.prince/asymptote/2021/2.69.cff
           - hammerlindl.bowman.prince/asymptote/2022/2.83.cff
+          - matthes/libf18cndmem/2022/0.0.1.cff
           - metcalf.reid.cohen/fortran/2018.cff
           - sakai.matthes/sysexits-rs/2022/0.3.3.cff
 

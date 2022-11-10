@@ -133,6 +133,20 @@ references:
     title: Die FORTRAN-Fibel
     type: book
     year: 1991
+  - type: software
+    date-released: 2022-11-09
+    version: 0.0.1
+    abstract: >-
+      A Fortran 2018 library for conditional (de-)allocation of allocatable objects
+      of intrinsic types.
+    authors:
+      - alias: kevinmatthes
+        family-names: Matthes
+        given-names: Kevin
+    license: GPL-2.0
+    repository-code: https://github.com/kevinmatthes/fortran2018-conditional-memory
+    title: fortran2018-conditional-memory
+    url: https://github.com/kevinmatthes/fortran2018-conditional-memory
   - abstract: Incorporating Fortran 2018
     authors:
       - family-names: Metcalf

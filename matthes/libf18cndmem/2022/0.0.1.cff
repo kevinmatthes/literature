@@ -21,7 +21,7 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       Citation settings for the Git repository.
+##  BRIEF       This is a CFF database to be fetched by `cffreference`.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
 ##  FILE        0.0.1.cff
@@ -38,7 +38,7 @@ authors:
 cff-version: 1.2.0
 license: GPL-2.0
 message: This is a CFF database to be fetched by `cffreference`.
-title: '0.3.3'
+title: '0.0.1'
 
 # The entry to fetch.
 preferred-citation:

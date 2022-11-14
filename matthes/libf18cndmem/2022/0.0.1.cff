@@ -43,7 +43,7 @@ title: '0.0.1'
 # The entry to fetch.
 preferred-citation:
   type: software
-  date-released: 2022-11-09
+  date-released: 2022-11-14
   version: 0.0.1
   abstract: >-
     A Fortran 2018 library for conditional (de-)allocation of allocatable objects
@@ -52,7 +52,7 @@ preferred-citation:
     - alias: kevinmatthes
       family-names: Matthes
       given-names: Kevin
-  license: GPL-2.0
+  license: GPL-3.0
   repository-code: https://github.com/kevinmatthes/fortran2018-conditional-memory
   title: fortran2018-conditional-memory
   url: https://github.com/kevinmatthes/fortran2018-conditional-memory

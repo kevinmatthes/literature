@@ -66,6 +66,7 @@ jobs:
           - CITATION.cff
           - chacon.straub/git/2014.cff
           - chivers.sleightholme/fortran/2018.cff
+          - klabnik.nichols/rust/2018.cff
           - kuhme.witschital/fortran/1991.cff
           - hammerlindl.bowman.prince/asymptote/2021/2.69.cff
           - hammerlindl.bowman.prince/asymptote/2022/2.83.cff

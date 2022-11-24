@@ -21,58 +21,44 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       The definition of a GitHub Action.
+##  BRIEF       This is a CFF database to be fetched by `cffreference`.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
-##  FILE        cffconvert.yml
+##  FILE        0.3.4.cff
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: cffconvert
+# Parser settings.
+authors:
+  - alias: kevinmatthes
+    family-names: Matthes
+    given-names: Kevin
+cff-version: 1.2.0
+license: GPL-2.0
+message: This is a CFF database to be fetched by `cffreference`.
+title: '0.3.4'
 
-on:
-  pull_request:
-    paths:
-      - '**/**/*.cff'
-      - '**/**/**/*.cff'
-      - CITATION.cff
-  push:
-    paths:
-      - '**/**/*.cff'
-      - CITATION.cff
-
-permissions:
-  contents: read
-
-jobs:
-  validation:
-    name: validate
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3.1.0
-        with:
-          persist-credentials: false
-
-      - name: cffconvert
-        uses: citation-file-format/cffconvert-github-action@2.0.0
-        with:
-          args: --validate -i ${{ matrix.cff }}
-    strategy:
-      matrix:
-        cff:
-          - CITATION.cff
-          - chacon.straub/git/2014.cff
-          - chivers.sleightholme/fortran/2018.cff
-          - klabnik.nichols/rust/2018.cff
-          - kuhme.witschital/fortran/1991.cff
-          - hammerlindl.bowman.prince/asymptote/2021/2.69.cff
-          - hammerlindl.bowman.prince/asymptote/2022/2.83.cff
-          - matthes/libf18cndmem/2022/0.0.1.cff
-          - metcalf.reid.cohen/fortran/2018.cff
-          - sakai.matthes/sysexits-rs/2022/0.3.3.cff
-          - sakai.matthes/sysexits-rs/2022/0.3.4.cff
+# The entry to fetch.
+preferred-citation:
+  type: software
+  date-released: 2022-11-24
+  version: 0.3.4
+  abstract: The system exit codes as defined by <sysexits.h> for Rust
+  authors:
+    - alias: sorairolake
+      family-names: Sakai
+      given-names: Shun
+    - alias: kevinmatthes
+      family-names: Matthes
+      given-names: Kevin
+  license:
+    - Apache-2.0
+    - MIT
+  repository-artifact: https://crates.io/crates/sysexits
+  repository-code: https://github.com/sorairolake/sysexits-rs
+  title: sysexits-rs
+  url: https://docs.rs/sysexits
 
 ################################################################################

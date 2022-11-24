@@ -73,5 +73,6 @@ jobs:
           - matthes/libf18cndmem/2022/0.0.1.cff
           - metcalf.reid.cohen/fortran/2018.cff
           - sakai.matthes/sysexits-rs/2022/0.3.3.cff
+          - sakai.matthes/sysexits-rs/2022/0.3.4.cff
 
 ################################################################################
